@@ -1,37 +1,13 @@
-let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-
-function renderTasks() {
-    const list = document.getElementById('taskList');
-    list.innerHTML = '';
-    tasks.forEach((task, index) => {
-        const li = document.createElement('li');
-        li.className = task.completed ? 'completed' : '';
-        li.innerHTML = `
-            <span onclick="toggleTask(${index})">${task.text}</span>
-            <button onclick="deleteTask(${index})">削除</button>
-        `;
-        list.appendChild(li);
+// スムーズスクロール
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
     });
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-}
+});
 
-function addTask() {
-    const input = document.getElementById('taskInput');
-    if (input.value.trim()) {
-        tasks.push({ text: input.value, completed: false });
-        input.value = '';
-        renderTasks();
-    }
-}
+// フォーム送信
+document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault(); alert('ありがとうございます！ 近日メール対応予定です。');
+});
 
-function toggleTask(index) {
-    tasks[index].completed = !tasks[index].completed;
-    renderTasks();
-}
-
-function deleteTask(index) {
-    tasks.splice(index, 1);
-    renderTasks();
-}
-
-renderTasks();
+// ToDo残し（前回コードも併存）

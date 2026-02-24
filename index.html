@@ -3,16 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo App</title>
+    <title>田中 | ソフトウェア開発者 </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>私のToDo</h1>
-        <input type="text" id="taskInput" placeholder="タスクを入力">
-        <button onclick="addTask()">追加</button>
-        <ul id="taskList"></ul>
-    </div>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="nav-brand">UESAKA.dev</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </nav>
+        <div class="hero-content">
+            <h1>上坂隆</h1>
+            <p class="subtitle">量子力学 × 有機化学 × Python開発者<br>Okinawa拠点</p>
+            <a href="#portfolio" class="cta-button">作品を見る</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>ソフトウェア開発者として、量子化学シミュレーションとAIデータベースを専門。</p>
+                <p>Python/SQLite/Perplexity AIを駆使し、複雑な問題を構造化解決。</p>
+                <ul class="skills">
+                    <li>量子力学数値計算</li>
+                    <li>RDKit有機合成予測</li>
+                    <li>LangChain AI統合</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://via.placeholder.com/300x400/667eea/ffffff?text=Photo" alt="上坂隆">
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <div class="projects-grid">
+            <!-- 前回のポートフォリオカード3つをここにコピー -->
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="名前" required>
+            <input type="email" placeholder="email@example.com" required>
+            <textarea placeholder="メッセージ" rows="5" required></textarea>
+            <button type="submit">送信</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 上坂隆 | Okinawa, Japan | <a href="https://github.com/nitte/nitte.github.io">Source</a></p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

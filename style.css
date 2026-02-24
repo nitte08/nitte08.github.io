@@ -1,8 +1,25 @@
-body { font-family: 'Roboto', sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
-.container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-h1 { text-align: center; color: #333; }
-input { width: 70%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
-button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
-ul { list-style: none; padding: 0; }
-li { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #eee; }
-.completed { text-decoration: line-through; opacity: 0.6; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; }
+
+/* Hero */
+.hero { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    color: white; min-height: 100vh; display: flex; flex-direction: column; 
+    position: relative; 
+}
+.navbar { display: flex; justify-content: space-between; padding: 1rem 5%; position: fixed; width: 100%; background: rgba(0,0,0,0.1); backdrop-filter: blur(10px); }
+.nav-menu { display: flex; list-style: none; gap: 2rem; }
+.cta-button { display: inline-block; padding: 15px 30px; background: white; color: #667eea; text-decoration: none; border-radius: 50px; font-weight: bold; transition: transform 0.3s; }
+.cta-button:hover { transform: scale(1.05); }
+
+/* Sections */
+.section { padding: 80px 5%; max-width: 1200px; margin: auto; }
+.about-grid, .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+/* Responsive */
+@media (max-width: 768px) { 
+    .nav-menu { display: none; } .hamburger { display: block; } 
+    .hero-content { text-align: center; padding-top: 100px; } 
+}
+
+/* Dark mode対応（前回実装）など */
