@@ -1,43 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>はじめてのサイト</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1>はじめてのサイト</h1>
-    <nav>
-      <a href="#about">このサイトについて</a>
-      <a href="#services">サービス</a>
-      <a href="#contact">お問い合わせ</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>このサイトについて</h2>
-      <p>HTMLとCSSの練習用に作ったシンプルなサンプルサイトです。</p>
-    </section>
-
-    <section id="services">
-      <h2>サービス</h2>
-      <ul>
-        <li>サンプルサービスA</li>
-        <li>サンプルサービスB</li>
-        <li>サンプルサービスC</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>お問い合わせ</h2>
-      <p>ご連絡は <a href="mailto:example@example.com">example@example.com</a> まで。</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <small>&copy; 2026 Sample Site</small>
-  </footer>
+    <div class="container">
+        <h1>私のToDo</h1>
+        <input type="text" id="taskInput" placeholder="タスクを入力">
+        <button onclick="addTask()">追加</button>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
