@@ -3,66 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>田中 | ソフトウェア開発者 </title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Okinawa Fitness Club | 沖縄最強ジム</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header class="hero">
         <nav class="navbar">
-            <div class="nav-brand">UESAKA.dev</div>
+            <div class="logo">OKINAWA GYM</div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#classes">クラス</a></li>
+                <li><a href="#trainers">トレーナー</a></li>
+                <li><a href="#pricing">料金</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
             </ul>
-            <div class="hamburger">☰</div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
         </nav>
         <div class="hero-content">
-            <h1>上坂隆</h1>
-            <p class="subtitle">量子力学 × 有機化学 × Python開発者<br>Okinawa拠点</p>
-            <a href="#portfolio" class="cta-button">作品を見る</a>
+            <h1>沖縄最強の<br>フィットネスクラブ</h1>
+            <p>美ら海を見ながら理想のボディへ。パーソナル指導で確実成果。</p>
+            <div class="hero-buttons">
+                <a href="#classes" class="cta-primary">今すぐ無料体験</a>
+                <a href="#pricing" class="cta-secondary">料金を見る</a>
+            </div>
         </div>
     </header>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>ソフトウェア開発者として、量子化学シミュレーションとAIデータベースを専門。</p>
-                <p>Python/SQLite/Perplexity AIを駆使し、複雑な問題を構造化解決。</p>
-                <ul class="skills">
-                    <li>量子力学数値計算</li>
-                    <li>RDKit有機合成予測</li>
-                    <li>LangChain AI統合</li>
-                </ul>
+    <section id="classes" class="section">
+        <h2 class="section-title">人気クラス</h2>
+        <div class="classes-grid">
+            <div class="class-card">
+                <i class="fas fa-dumbbell class-icon"></i>
+                <h3>筋力トレーニング</h3>
+                <p>フリーウェイト完備。パーソナル指導で正しいフォームを。</p>
+                <span class="price">¥3,000/回</span>
             </div>
-            <div class="about-image">
-                <img src="https://via.placeholder.com/300x400/667eea/ffffff?text=Photo" alt="上坂隆">
+            <div class="class-card">
+                <i class="fas fa-heartbeat class-icon"></i>
+                <h3>HIIT</h3>
+                <p>20分高強度インターバル。脂肪燃焼効率20倍。</p>
+                <span class="price">¥2,500/回</span>
+            </div>
+            <div class="class-card">
+                <i class="fas fa-swimmer class-icon"></i>
+                <h3>アクアビクス</h3>
+                <p>プールで水中エクササイズ。関節に優しい沖縄仕様。</p>
+                <span class="price">¥2,000/回</span>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="section">
-        <h2>Portfolio</h2>
-        <div class="projects-grid">
-            <!-- 前回のポートフォリオカード3つをここにコピー -->
+    <section id="pricing" class="section pricing-section">
+        <h2 class="section-title">料金プラン</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>ライト</h3>
+                <div class="price">¥5,000<span>/月</span></div>
+                <ul>
+                    <li>平日夜利用</li>
+                    <li>基本マシン</li>
+                    <li>シャワー</li>
+                </ul>
+                <a href="#contact" class="cta-button">申し込み</a>
+            </div>
+            <div class="price-card featured">
+                <div class="featured-badge">人気No.1</div>
+                <h3>スタンダード</h3>
+                <div class="price">¥9,800<span>/月</span></div>
+                <ul>
+                    <li>24時間利用</li>
+                    <li>全クラス参加</li>
+                    <li>パーソナル1回無料</li>
+                </ul>
+                <a href="#contact" class="cta-button">申し込み</a>
+            </div>
+            <div class="price-card">
+                <h3>プレミアム</h3>
+                <div class="price">¥15,000<span>/月</span></div>
+                <ul>
+                    <li>パーソナル月4回</li>
+                    <li>栄養相談</li>
+                    <li>VIPラウンジ</li>
+                </ul>
+                <a href="#contact" class="cta-button">申し込み</a>
+            </div>
         </div>
     </section>
 
     <section id="contact" class="section">
-        <h2>Contact</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="名前" required>
-            <input type="email" placeholder="email@example.com" required>
-            <textarea placeholder="メッセージ" rows="5" required></textarea>
-            <button type="submit">送信</button>
+        <h2 class="section-title">無料体験予約</h2>
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="お名前" required>
+                <input type="tel" placeholder="電話番号" required>
+            </div>
+            <input type="email" placeholder="メールアドレス">
+            <select required>
+                <option value="">希望クラスを選択</option>
+                <option>筋力トレーニング</option>
+                <option>HIIT</option>
+                <option>アクアビクス</option>
+            </select>
+            <textarea placeholder="メッセージ・希望日時" rows="4"></textarea>
+            <button type="submit">予約する <i class="fas fa-arrow-right"></i></button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; 2026 上坂隆 | Okinawa, Japan | <a href="https://github.com/nitte/nitte.github.io">Source</a></p>
+        <div class="footer-content">
+            <div class="logo">OKINAWA GYM</div>
+            <p>沖縄県那覇市美栄橋 | TEL: 098-XXX-XXXX | © 2026 Okinawa Fitness Club</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
